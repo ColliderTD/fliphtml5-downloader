@@ -65,7 +65,7 @@ def downloadImage(taskID):
     # Create directory if does not exist
     os.makedirs(folderName, exist_ok=True)
 
-    URL = "http://online.fliphtml5.com/{0}/files/large/{1}.jpg".format(
+    URL = "http://fliphtml5.com/preview/{0}/files/large/{1}.jpg".format(
         bookID, taskID)
          
     with open("useragents.txt", "r") as f:
