@@ -3,21 +3,7 @@ import argparse
 import os
 
 header = """
-                              ,      \    /      ,
-                             / \     )\__/(     / \\
-                            /   \   (_\  /_)   /   \\
-    _______________________/_____\___\@  @/___/_____\\____________________
-   |                                 |\../|                              |
-   |                                  \VV/                               |
-   |   _______ _______  ______ _______  _____  _  _  _ _______ __   _    |
-   |   |  |  | |_____| |_____/ |       |     | |  |  | |______ | \  |    |
-   |   |  |  | |     | |    \_ |_____  |_____| |__|__| |______ |  \_|    |
-   |_____________________________________________________________________|
-     || ||               |    /\ /     \\\\     \ /\    |
-     || ||               |  /   V       ))     V   \  |
-     || ||               |/     `      //      '     \|
-     || ||               `             V              '
-    _||_||________________
+    ______________________
    |                      |
    | FlipHTML5 IMG -> PDF |
    |______________________|
@@ -32,7 +18,7 @@ folderName = args.folderName
 start = args.start
 end = args.end
 
-print("Converting...")
+print("Convirtiendo...")
 images = []
 for num in range(start, end+1):
     filepath = "{0}/{1}.jpg".format(folderName, num)
@@ -42,5 +28,5 @@ for num in range(start, end+1):
 with open("{0}.pdf".format(folderName), "wb") as file:
     file.write(img2pdf.convert(images))
 
-print("\rFinished. Press any key to continue")
+print("\rCompletado. Presiona cualquier boton para salir")
 input()
